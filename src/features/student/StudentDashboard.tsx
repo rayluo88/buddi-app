@@ -75,7 +75,7 @@ const DEMO_STUDENT: Student = {
 
 export const StudentDashboard = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation('student');
 
   // Student state
   const [student, setStudent] = useState<Student>(DEMO_STUDENT);
@@ -206,11 +206,11 @@ export const StudentDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-primary-600">{t('appName')}</h1>
+          <h1 className="text-2xl font-bold text-primary-600">{t('appName', { ns: 'common' })}</h1>
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
             <Button variant="ghost" onClick={() => navigate('/')}>
-              {t('switchRole')}
+              {t('common.switchRole', { ns: 'common' })}
             </Button>
           </div>
         </div>
@@ -221,9 +221,9 @@ export const StudentDashboard = () => {
         {/* Greeting */}
         <div className="mb-8">
           <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-            {t('student.greeting', { name: student.name })}
+            {t('greeting', { name: student.name })}
           </h2>
-          <p className="text-gray-600 text-lg">{t('welcome')}</p>
+          <p className="text-gray-600 text-lg">{t('common.welcome', { ns: 'common' })}</p>
         </div>
 
         {/* Gamification Stats Bar */}
