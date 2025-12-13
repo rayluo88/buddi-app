@@ -1,0 +1,31 @@
+{
+  "title": "Counselor Dashboard",
+  "priority_queue": {
+    "title": "Priority Queue",
+    "subtitle": "Students requiring attention",
+    "risk_levels": {
+      "red": "Immediate Review",
+      "orange": "Attention Needed",
+      "yellow": "Monitor",
+      "green": "Thriving"
+    },
+    "no_students": "No students flagged"
+  },
+  "student_detail": {
+    "title": "Student Timeline",
+    "mood_trend": "Mood Trend",
+    "journal_entries": "Journal Entries",
+    "engagement": "Engagement",
+    "risk_score": "Risk Score",
+    "risk_factors": "Risk Factors",
+    "last_active": "Last Active",
+    "actions": "Actions"
+  },
+  "interventions": {
+    "add_note": "Add Case Note",
+    "schedule_followup": "Schedule Follow-up",
+    "escalate": "Escalate to REACH",
+    "dismiss": "Dismiss Flag",
+    "mark_reviewed": "Mark as Reviewed"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "title": "教师仪表板",
+  "class_pulse": {
+    "title": "{{className}} 班级健康脉搏",
+    "week_of": "{{date}} 这一周",
+    "average_mood": "本周平均情绪",
+    "trend": "与上周相比",
+    "participation": "参与率",
+    "students_checked_in": "{{count}} / {{total}} 名学生已签到"
+  },
+  "top_concerns": {
+    "title": "主要关注点",
+    "subtitle": "匿名汇总提及",
+    "mentions": "{{count}} 次提及"
+  },
+  "privacy": {
+    "notice": "个人学生数据不可见",
+    "subtitle": "如有个别关注，请联系学校辅导员",
+    "how_it_works": "隐私如何运作"
+  },
+  "alerts": {
+    "class_stress": "班级压力高于学校平均水平",
+    "suggestion": "建议：{{suggestion}}"
+  },
+  "actions": {
+    "view_trends": "查看趋势",
+    "compare": "与学校比较",
+    "resources": "资源",
+    "contact_counselor": "联系辅导员"
+  }
+}

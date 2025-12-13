@@ -1,0 +1,36 @@
+{
+  "title": "CBT Exercises",
+  "subtitle": "Evidence-based exercises to support your wellbeing",
+  "thought_flipper": {
+    "name": "Thought Flipper",
+    "description": "Reframe unhelpful thoughts into balanced ones",
+    "duration": "5 min",
+    "xp": "+20 XP"
+  },
+  "gratitude_jar": {
+    "name": "Gratitude Jar",
+    "description": "Capture three things you're grateful for",
+    "duration": "3 min",
+    "xp": "+20 XP"
+  },
+  "worry_box": {
+    "name": "Worry Time Box",
+    "description": "Schedule dedicated time for worries",
+    "duration": "5 min",
+    "xp": "+20 XP"
+  },
+  "energy_boost": {
+    "name": "Energy Boost",
+    "description": "Quick activities to lift your mood",
+    "duration": "10 min",
+    "xp": "+20 XP"
+  },
+  "self_compassion": {
+    "name": "Self-Compassion Letter",
+    "description": "Write a kind letter to yourself",
+    "duration": "8 min",
+    "xp": "+20 XP"
+  },
+  "complete": "Exercise Complete!",
+  "completion_message": "Great work! You earned {{xp}} XP."
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Teacher Dashboard",
+  "class_pulse": {
+    "title": "Class {{className}} Wellbeing Pulse",
+    "week_of": "Week of {{date}}",
+    "average_mood": "Average Mood This Week",
+    "trend": "vs. last week",
+    "participation": "Participation Rate",
+    "students_checked_in": "{{count}} / {{total}} students checked in"
+  },
+  "top_concerns": {
+    "title": "Top Concerns",
+    "subtitle": "Aggregated anonymous mentions",
+    "mentions": "{{count}} mentions"
+  },
+  "privacy": {
+    "notice": "Individual student data is not visible",
+    "subtitle": "For individual concerns, please contact the school counselor",
+    "how_it_works": "How Privacy Works"
+  },
+  "alerts": {
+    "class_stress": "Class stress elevated vs. school average",
+    "suggestion": "Consider: {{suggestion}}"
+  },
+  "actions": {
+    "view_trends": "View Trends",
+    "compare": "Compare to School",
+    "resources": "Resources",
+    "contact_counselor": "Contact Counselor"
+  }
+}

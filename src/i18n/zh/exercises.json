@@ -1,0 +1,36 @@
+{
+  "title": "认知行为练习",
+  "subtitle": "基于证据的练习，支持您的健康",
+  "thought_flipper": {
+    "name": "思维转换",
+    "description": "将无益的想法重新构建为平衡的想法",
+    "duration": "5 分钟",
+    "xp": "+20 经验值"
+  },
+  "gratitude_jar": {
+    "name": "感恩罐",
+    "description": "记录三件你感激的事情",
+    "duration": "3 分钟",
+    "xp": "+20 经验值"
+  },
+  "worry_box": {
+    "name": "担忧时间盒",
+    "description": "为担忧安排专门的时间",
+    "duration": "5 分钟",
+    "xp": "+20 经验值"
+  },
+  "energy_boost": {
+    "name": "能量提升",
+    "description": "快速活动来提振心情",
+    "duration": "10 分钟",
+    "xp": "+20 经验值"
+  },
+  "self_compassion": {
+    "name": "自我同情信",
+    "description": "给自己写一封亲切的信",
+    "duration": "8 分钟",
+    "xp": "+20 经验值"
+  },
+  "complete": "练习完成！",
+  "completion_message": "干得好！你获得了 {{xp}} 经验值。"
+}

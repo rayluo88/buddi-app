@@ -1,0 +1,31 @@
+{
+  "title": "辅导员仪表板",
+  "priority_queue": {
+    "title": "优先级队列",
+    "subtitle": "需要关注的学生",
+    "risk_levels": {
+      "red": "立即审查",
+      "orange": "需要关注",
+      "yellow": "监控",
+      "green": "状态良好"
+    },
+    "no_students": "没有标记的学生"
+  },
+  "student_detail": {
+    "title": "学生时间线",
+    "mood_trend": "情绪趋势",
+    "journal_entries": "日记条目",
+    "engagement": "参与度",
+    "risk_score": "风险评分",
+    "risk_factors": "风险因素",
+    "last_active": "最后活跃",
+    "actions": "操作"
+  },
+  "interventions": {
+    "add_note": "添加案例备注",
+    "schedule_followup": "安排跟进",
+    "escalate": "升级至REACH",
+    "dismiss": "取消标记",
+    "mark_reviewed": "标记为已审查"
+  }
+}

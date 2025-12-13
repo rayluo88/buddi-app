@@ -1,0 +1,40 @@
+{
+  "title": "Student Dashboard",
+  "greeting": "Hi, {{name}}!",
+  "streak": {
+    "label": "Day Streak",
+    "congratulations": "Congratulations! You've maintained your streak for {{count}} days!",
+    "keep_going": "Keep going!"
+  },
+  "xp": {
+    "label": "XP",
+    "level": "Level {{level}}",
+    "next_level": "{{xp}} XP to next level"
+  },
+  "mood_check": {
+    "title": "Daily Check-in",
+    "prompt": "How are you feeling today?",
+    "moods": {
+      "great": "Great",
+      "good": "Good",
+      "okay": "Okay",
+      "low": "Low",
+      "struggling": "Struggling"
+    },
+    "context": "What's on your mind?",
+    "contexts": {
+      "school": "School",
+      "friends": "Friends",
+      "family": "Family",
+      "health": "Health",
+      "other": "Other"
+    },
+    "journal_prompt": "Want to share more? (Optional)",
+    "complete": "Check-in Complete!"
+  },
+  "achievements": {
+    "title": "Achievements",
+    "unlocked": "Achievement Unlocked!",
+    "view_all": "View All Achievements"
+  }
+}

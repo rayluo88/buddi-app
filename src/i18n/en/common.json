@@ -1,0 +1,46 @@
+{
+  "appName": "Buddi",
+  "tagline": "Your AI Wellbeing Buddy",
+  "buttons": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "confirm": "Confirm"
+  },
+  "navigation": {
+    "home": "Home",
+    "checkIn": "Check-in",
+    "exercises": "Exercises",
+    "mindfulness": "Mindfulness",
+    "progress": "Progress",
+    "dashboard": "Dashboard",
+    "profile": "Profile"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "welcome": "Welcome",
+    "hello": "Hello",
+    "language": "Language",
+    "english": "English",
+    "chinese": "Chinese (Simplified)",
+    "switchRole": "Switch Role",
+    "logout": "Log Out"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "days": "days",
+    "weeks": "weeks",
+    "minutes": "minutes"
+  }
+}

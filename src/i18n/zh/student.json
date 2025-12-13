@@ -1,0 +1,40 @@
+{
+  "title": "学生仪表板",
+  "greeting": "你好，{{name}}！",
+  "streak": {
+    "label": "连续天数",
+    "congratulations": "恭喜！你已经坚持了{{count}}天！",
+    "keep_going": "继续加油！"
+  },
+  "xp": {
+    "label": "经验值",
+    "level": "等级 {{level}}",
+    "next_level": "还需 {{xp}} 经验值升级"
+  },
+  "mood_check": {
+    "title": "每日签到",
+    "prompt": "你今天感觉怎么样？",
+    "moods": {
+      "great": "很好",
+      "good": "好",
+      "okay": "还行",
+      "low": "有点低落",
+      "struggling": "挣扎中"
+    },
+    "context": "你在想什么？",
+    "contexts": {
+      "school": "学校",
+      "friends": "朋友",
+      "family": "家庭",
+      "health": "健康",
+      "other": "其他"
+    },
+    "journal_prompt": "想分享更多吗？（可选）",
+    "complete": "签到完成！"
+  },
+  "achievements": {
+    "title": "成就",
+    "unlocked": "成就解锁！",
+    "view_all": "查看所有成就"
+  }
+}
