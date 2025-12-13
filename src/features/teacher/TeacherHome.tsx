@@ -16,7 +16,7 @@ export const TeacherHome = () => {
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
             <Button variant="ghost" onClick={() => navigate('/')}>
-              {t('switchRole')}
+              {t('common.switchRole')}
             </Button>
           </div>
         </div>

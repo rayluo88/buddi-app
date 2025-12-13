@@ -37,11 +37,11 @@ export const TeacherDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-primary-600">{t('appName')}</h1>
+          <h1 className="text-2xl font-bold text-primary-600">Buddi</h1>
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
             <Button variant="ghost" onClick={() => navigate('/')}>
-              {t('switchRole')}
+              {t('common.switchRole')}
             </Button>
           </div>
         </div>
