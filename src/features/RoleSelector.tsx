@@ -49,9 +49,6 @@ export const RoleSelector = () => {
             </Card>
           ))}
         </div>
-
-        {/* Footer */}
-        <p className="text-center text-sm text-gray-500 mt-12">Phase 0: Project Setup Demo</p>
       </div>
     </div>
   );
