@@ -37,12 +37,13 @@
 
 ✅ **Counselor Features**
 - AI-powered priority queue (risk-sorted student list)
+- Individual student risk profiles for personalized support
 - Student detail view with mood timeline
 - AI-generated case summaries and conversation starters
 - Explainable risk scoring (mood trend 30%, keywords 25%, etc.)
 
 ✅ **Teacher Features**
-- Privacy-protected class wellbeing pulse
+- Privacy-protected aggregate wellbeing trends (no individual student data)
 - 8-week mood trend visualization
 - Anonymous aggregate concerns (≥5 student threshold)
 - Alerts and recommendations

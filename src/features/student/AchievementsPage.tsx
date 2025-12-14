@@ -95,6 +95,13 @@ export const AchievementsPage = () => {
       if (parsed.riskScore?.lastUpdated) {
         parsed.riskScore.lastUpdated = new Date(parsed.riskScore.lastUpdated);
       }
+      // Parse achievement unlockedAt dates
+      if (parsed.achievements) {
+        parsed.achievements = parsed.achievements.map((ach: any) => ({
+          ...ach,
+          unlockedAt: new Date(ach.unlockedAt),
+        }));
+      }
       setStudent(parsed);
     }
   }, []);
