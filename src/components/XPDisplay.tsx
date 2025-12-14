@@ -9,7 +9,7 @@ interface XPDisplayProps {
 }
 
 export const XPDisplay = ({ totalXP, showProgress = true, size = 'md' }: XPDisplayProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('student');
   const currentLevel = calculateLevel(totalXP);
   const xpToNext = calculateXPToNextLevel(totalXP);
   const progress = calculateLevelProgress(totalXP);
@@ -32,14 +32,12 @@ export const XPDisplay = ({ totalXP, showProgress = true, size = 'md' }: XPDispl
       <div className="flex items-baseline justify-between mb-1">
         <div className="flex items-baseline gap-2">
           <span className="font-bold text-secondary-600">
-            {t('student.xp.level', { level: currentLevel })}
+            {t('xp.level', { level: currentLevel })}
           </span>
           <span className="text-gray-600 text-sm">{totalXP.toLocaleString()} XP</span>
         </div>
         {xpToNext > 0 && (
-          <span className="text-xs text-gray-500">
-            {t('student.xp.next_level', { xp: xpToNext })}
-          </span>
+          <span className="text-xs text-gray-500">{t('xp.next_level', { xp: xpToNext })}</span>
         )}
       </div>
 

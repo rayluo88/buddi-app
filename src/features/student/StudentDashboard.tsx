@@ -342,7 +342,11 @@ export const StudentDashboard = () => {
             >
               🧘 Mindfulness Sessions <span className="text-sm ml-2">+50 XP</span>
             </Button>
-            <Button variant="ghost" className="w-full py-4 text-lg">
+            <Button
+              variant="ghost"
+              className="w-full py-4 text-lg"
+              onClick={() => navigate('/student/achievements')}
+            >
               🏆 View All Achievements
             </Button>
             <Button variant="ghost" className="w-full py-4 text-lg">
@@ -354,25 +358,52 @@ export const StudentDashboard = () => {
         {/* Achievement Gallery Preview */}
         <Card>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-semibold text-gray-800">Recent Achievements</h3>
-            <Button variant="ghost" className="text-sm">
+            <h3 className="text-xl font-semibold text-gray-800">
+              {student.achievements.length > 0 ? 'Recent Achievements' : 'Achievement Preview'}
+            </h3>
+            <Button
+              variant="ghost"
+              className="text-sm"
+              onClick={() => navigate('/student/achievements')}
+            >
               View All →
             </Button>
           </div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-            {ACHIEVEMENT_DEFINITIONS.slice(0, 6).map(achDef => {
-              const unlocked = student.achievements.find(a => a.id === achDef.id);
-              return (
+          {student.achievements.length > 0 ? (
+            // Show unlocked achievements
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              {student.achievements
+                .slice()
+                .reverse()
+                .slice(0, 6)
+                .map(ach => {
+                  const def = ACHIEVEMENT_DEFINITIONS.find(d => d.id === ach.id);
+                  if (!def) return null;
+                  return (
+                    <AchievementBadge
+                      key={ach.id}
+                      achievement={{ ...def, ...ach }}
+                      size="md"
+                      showName={false}
+                      locked={false}
+                    />
+                  );
+                })}
+            </div>
+          ) : (
+            // Show first 6 locked achievements as preview
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              {ACHIEVEMENT_DEFINITIONS.slice(0, 6).map(achDef => (
                 <AchievementBadge
                   key={achDef.id}
-                  achievement={unlocked ? { ...achDef, ...unlocked } : achDef}
+                  achievement={achDef}
                   size="md"
                   showName={false}
-                  locked={!unlocked}
+                  locked={true}
                 />
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          )}
         </Card>
       </main>
 
