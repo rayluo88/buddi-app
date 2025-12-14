@@ -29,14 +29,14 @@ export const AchievementBadge = ({
           ${sizeClasses[size]}
           rounded-full
           flex items-center justify-center
-          ${isUnlocked ? 'bg-gradient-to-br from-primary-100 to-secondary-100 shadow-lg' : 'bg-gray-100'}
-          ${locked && !isUnlocked ? 'grayscale opacity-50' : ''}
+          ${isUnlocked ? 'bg-gradient-to-br from-primary-100 to-secondary-100 shadow-lg' : 'bg-gray-200 border-2 border-gray-300'}
+          ${locked && !isUnlocked ? 'grayscale opacity-70' : ''}
           relative
         `}
         whileHover={isUnlocked ? { scale: 1.1 } : {}}
         transition={{ type: 'spring', stiffness: 300 }}
       >
-        <span className={locked && !isUnlocked ? 'opacity-30' : ''}>
+        <span className={locked && !isUnlocked ? 'opacity-60' : ''}>
           {isUnlocked ? achievement.icon : '🔒'}
         </span>
 
