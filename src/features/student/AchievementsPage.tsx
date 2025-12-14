@@ -10,6 +10,57 @@ import { Badge } from '../../components/Badge';
 import { AchievementBadge } from '../../components/AchievementBadge';
 import { LanguageSwitcher } from '../../components/LanguageSwitcher';
 
+// Demo student data (fallback if localStorage is empty)
+const DEMO_STUDENT: Student = {
+  id: 'student-1',
+  name: 'Wei Ling',
+  class: '2A',
+  moodHistory: [
+    {
+      id: 'mood-1',
+      mood: 'good',
+      date: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000),
+      note: 'Feeling energized today!',
+    },
+    {
+      id: 'mood-2',
+      mood: 'great',
+      date: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000),
+      note: 'Aced my math test!',
+    },
+    {
+      id: 'mood-3',
+      mood: 'okay',
+      date: new Date(Date.now() - 4 * 24 * 60 * 60 * 1000),
+    },
+    {
+      id: 'mood-4',
+      mood: 'good',
+      date: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
+    },
+    {
+      id: 'mood-5',
+      mood: 'good',
+      date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
+      note: 'Had fun at recess with friends',
+    },
+    {
+      id: 'mood-6',
+      mood: 'great',
+      date: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000),
+    },
+  ],
+  streakCount: 6,
+  totalXP: 175,
+  level: 2,
+  achievements: [],
+  riskScore: {
+    score: 0.15,
+    level: 'green',
+    lastUpdated: new Date(),
+  },
+};
+
 type CategoryType =
   | 'all'
   | 'streak'
@@ -25,7 +76,7 @@ export const AchievementsPage = () => {
   const { t } = useTranslation('student');
 
   // Load student data from localStorage
-  const [student, setStudent] = useState<Student | null>(null);
+  const [student, setStudent] = useState<Student>(DEMO_STUDENT);
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all');
   const [sortBy, setSortBy] = useState<SortType>('recent');
   const [searchQuery, setSearchQuery] = useState('');
@@ -47,14 +98,6 @@ export const AchievementsPage = () => {
       setStudent(parsed);
     }
   }, []);
-
-  if (!student) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 flex items-center justify-center">
-        <p className="text-gray-600">Loading...</p>
-      </div>
-    );
-  }
 
   // Calculate statistics
   const totalUnlocked = student.achievements.length;
