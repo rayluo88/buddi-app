@@ -5,13 +5,14 @@ export interface AchievementDefinition {
   name: string;
   description: string;
   icon: string;
-  category: 'streak' | 'check-in' | 'exercise' | 'mindfulness' | 'social' | 'milestone';
+  category: 'streak' | 'check-in' | 'exercise' | 'mindfulness' | 'social' | 'chat' | 'milestone';
   requirement: {
     type:
       | 'streak'
       | 'check-in-count'
       | 'exercise-count'
       | 'mindfulness-count'
+      | 'chat-count'
       | 'xp-total'
       | 'special';
     value: number;
@@ -176,6 +177,44 @@ export const ACHIEVEMENT_DEFINITIONS: AchievementDefinition[] = [
     xpReward: 40,
   },
 
+  // Chat Achievements
+  {
+    id: 'first-chat',
+    name: 'First Chat',
+    description: 'Have your first conversation with Buddi AI',
+    icon: '💬',
+    category: 'chat',
+    requirement: { type: 'chat-count', value: 1 },
+    xpReward: 25,
+  },
+  {
+    id: 'good-listener',
+    name: 'Good Listener',
+    description: 'Complete 5 conversations with Buddi AI',
+    icon: '👂',
+    category: 'chat',
+    requirement: { type: 'chat-count', value: 5 },
+    xpReward: 50,
+  },
+  {
+    id: 'heart-to-heart',
+    name: 'Heart to Heart',
+    description: 'Have 10 meaningful conversations with Buddi',
+    icon: '💖',
+    category: 'chat',
+    requirement: { type: 'chat-count', value: 10 },
+    xpReward: 75,
+  },
+  {
+    id: 'buddis-best-friend',
+    name: "Buddi's Best Friend",
+    description: 'Talk about all 4 conversation topics',
+    icon: '🌟',
+    category: 'chat',
+    requirement: { type: 'special', value: 4 },
+    xpReward: 100,
+  },
+
   // XP Milestones
   {
     id: 'xp-100',
@@ -225,9 +264,11 @@ export const checkAchievementUnlock = (
     checkInCount?: number;
     exerciseCount?: number;
     mindfulnessCount?: number;
+    chatCount?: number;
     totalXP?: number;
     completedExerciseTypes?: string[];
     completedMindfulnessTypes?: string[];
+    completedChatTopics?: string[];
   }
 ): boolean => {
   const { type, value } = achievement.requirement;
@@ -241,6 +282,8 @@ export const checkAchievementUnlock = (
       return (stats.exerciseCount || 0) >= value;
     case 'mindfulness-count':
       return (stats.mindfulnessCount || 0) >= value;
+    case 'chat-count':
+      return (stats.chatCount || 0) >= value;
     case 'xp-total':
       return (stats.totalXP || 0) >= value;
     case 'special':
@@ -254,6 +297,9 @@ export const checkAchievementUnlock = (
       }
       if (achievement.id === 'meditation-guru') {
         return (stats.completedMindfulnessTypes || []).length >= value;
+      }
+      if (achievement.id === 'buddis-best-friend') {
+        return (stats.completedChatTopics || []).length >= value;
       }
       return false;
     default:

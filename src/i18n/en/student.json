@@ -36,5 +36,16 @@
     "title": "Achievements",
     "unlocked": "Achievement Unlocked!",
     "view_all": "View All Achievements"
+  },
+  "chat": {
+    "title": "Chat with Buddi AI",
+    "choose_topic": "Choose a topic to start",
+    "description": "Talk to Buddi about what's on your mind. Choose a topic below to begin.",
+    "with_buddi": "Chat with Buddi",
+    "buddi_typing": "Buddi is typing",
+    "type_message": "Type your message...",
+    "end_conversation": "End Conversation",
+    "recent_conversations": "Recent Conversations",
+    "messages": "messages"
   }
 }

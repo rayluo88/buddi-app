@@ -3,6 +3,7 @@ import { StudentDashboard } from './StudentDashboard';
 import { StudentExercises } from './StudentExercises';
 import { StudentMindfulness } from './StudentMindfulness';
 import { AchievementsPage } from './AchievementsPage';
+import { ChatPage } from './ChatPage';
 
 export const StudentRoutes = () => {
   return (
@@ -12,6 +13,7 @@ export const StudentRoutes = () => {
       <Route path="/exercises" element={<StudentExercises />} />
       <Route path="/mindfulness" element={<StudentMindfulness />} />
       <Route path="/achievements" element={<AchievementsPage />} />
+      <Route path="/chat" element={<ChatPage />} />
       <Route path="/progress" element={<div>Progress (Coming Soon)</div>} />
     </Routes>
   );

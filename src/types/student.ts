@@ -1,3 +1,5 @@
+import type { Conversation } from './chat';
+
 export interface Student {
   id: string;
   name: string;
@@ -9,6 +11,7 @@ export interface Student {
   achievements: Achievement[];
   riskScore: RiskScore;
   lastActive?: Date;
+  conversations?: Conversation[]; // Chat with Buddi AI conversations
 }
 
 export interface MoodEntry {

@@ -349,7 +349,11 @@ export const StudentDashboard = () => {
             >
               🏆 View All Achievements
             </Button>
-            <Button variant="ghost" className="w-full py-4 text-lg">
+            <Button
+              variant="ghost"
+              className="w-full py-4 text-lg"
+              onClick={() => navigate('/student/chat')}
+            >
               💬 Chat with Buddi AI
             </Button>
           </div>

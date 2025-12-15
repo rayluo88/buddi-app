@@ -36,5 +36,16 @@
     "title": "成就",
     "unlocked": "成就解锁！",
     "view_all": "查看所有成就"
+  },
+  "chat": {
+    "title": "与Buddi AI聊天",
+    "choose_topic": "选择一个话题开始",
+    "description": "和Buddi谈谈你的想法。选择下面的话题开始吧。",
+    "with_buddi": "与Buddi聊天",
+    "buddi_typing": "Buddi正在输入",
+    "type_message": "输入你的消息...",
+    "end_conversation": "结束对话",
+    "recent_conversations": "最近的对话",
+    "messages": "条消息"
   }
 }
